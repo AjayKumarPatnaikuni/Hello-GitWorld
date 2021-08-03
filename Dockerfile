@@ -1,5 +1,5 @@
-FROM tomcat:8.0.51-jre8-alpine
-RUN rm -rf /usr/local/tomcat/webapps/*
+FROM ajju13/tomcat-8:v1.0
+#RUN rm -rf /usr/local/tomcat/webapps/*
 COPY ./target/*-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/*
 EXPOSE 8080
-CMD ["catalina.sh","run"]
+CMD ["./bin/catalina.sh","run"]
